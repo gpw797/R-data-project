@@ -100,7 +100,7 @@ The data underwent the following transformations to get to the desired tidy set 
 - Change variable names to more appropriate names. Per the course lectures this required changing the data to lower class. No additional changes were made and the names complied with class lectures.
 - Write the tidy data to a seperate file in the project directory. The file is tidydata.txt and is a comma deliminated .txt file.
 
-The R script for making the tidy data is https://github.com/gpw797/R_data_project/blob/master/run_analysis.R
+The R script for making the tidy data is https://github.com/gpw797/R-data-project/blob/master/run_analysis.R
 
 #note that the R file run_analysis.R is well documented with comments 
 
