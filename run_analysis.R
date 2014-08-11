@@ -48,4 +48,4 @@ aggdata <- aggregate(mysubset[,3:81], by=list(mysubset$activity, mysubset$indivi
 names(aggdata) <- sub("Group.2","individual",names(aggdata))
 names(aggdata) <-sub("Group.1","activity",names(aggdata))
 #write tidy data as a file to same project directory. File format is comma deliminated txt
-write.table(aggdata, "./project/tidydata.txt", sep=",")
+write.table(aggdata, "./project/tidydata.txt", sep=",", row.name=FALSE)

@@ -17,23 +17,25 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+Please note that the original variable names have been changed to lower case per step 4 and class lecture indicating that lower case should be used. IMO camel case is easier to read with these variable names.
+ 
+- tbodyacc-xyz
+- tgravityacc-xyz
+- tbodyaccjerk-xyz
+- tbodygyro-xyz
+- tbodygyrojerk-xyz
+- tbodyaccmag
+- tgravityaccmag
+- tbodyaccjerkmag
+- tbodygyromag
+- tbodygyrojerkmag
+- fbodyacc-xyz
+- fbodyaccjerk-xyz
+- fbodygyro-xyz
+- fbodyaccmag
+- fbodyaccjerkmag
+- fbodygyromag
+- fbodygyrojerkmag
 
 The set of variables that were estimated from these signals are: 
 
