@@ -41,6 +41,8 @@ mysubset$activity[mysubset$activity == "6"] <- "LAYING"
 #Appropriate labels with descriptive variable names step 4
 #change to all lower case per lecture - Editing Text Variables - week 4
 names(mysubset) <- tolower(names(mysubset))
+names(mysubset) <- gsub("\\()","",names(mysubset),)
+names(mysubset) <- gsub("-","",names(mysubset),)
 #Create a second data set avg of each variable for each activity & each subject step 5
 mysubset[,2] <- sapply(mysubset[,2], as.factor) 
 aggdata <- aggregate(mysubset[,3:81], by=list(mysubset$activity, mysubset$individual), FUN=mean, na.rm=T)

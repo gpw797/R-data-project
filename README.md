@@ -6,7 +6,7 @@ The repo contains the following files:
 * CodeBook.md - A codebook for the project decribing the variables, data and data transformations.
 * README.md - This file.
 
-The R script, run__analysis.R, takes the original data files and merges the training and test data sets into a single data file. The file is then subsetted based on variables that only contain mean and std (mean and standard deviation). The data is then modified by substituting the avtivity names for activity numbers. The activity names information is in the activity_labels.txt file. The data is then aggregated by indivdual and activity. Finally, a tidy set of data is exported as a text file.  See the code book and comments in thew script for complete details.  
+The R script, run__analysis.R, takes the original data files and merges the training and test data sets into a single data file. The file is then subsetted based on variables that only contain mean and std (mean and standard deviation). The data is then modified by substituting the avtivity names for activity numbers. The activity names information is in the activity_labels.txt file. The data is then aggregated by indivdual and activity. Finally, a tidy set of data is exported as a text file.  See the code book and comments in the script for complete details.  
 
 
 
