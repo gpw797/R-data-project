@@ -1,10 +1,10 @@
-####Getting and Cleaning Data class project Codebook
+##Getting and Cleaning Data class project Codebook
 
 * Part 1 - Variable Descriptions
 * Part 2 - The Data
 * Part 3 - Data Transformations
 
-##Part 1 - Variable Descriptions
+###Part 1 - Variable Descriptions
 
 The data is from the following website http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones and the short description of the data is Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors. 
 
@@ -17,21 +17,21 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-Please note that the original variable names have been changed to lower case per step 4 and class lecture indicating that lower case should be used. IMO camel case is easier to read with these variable names.
+Please note that the original variable names have been changed to lower case per step 4 and class lecture indicating that lower case should be used. Also, hyphens and parenthesis were removed. IMO camel case is easier to read with these variable names.
  
-- tbodyacc-xyz
-- tgravityacc-xyz
-- tbodyaccjerk-xyz
-- tbodygyro-xyz
-- tbodygyrojerk-xyz
+- tbodyaccxyz
+- tgravityaccxyz
+- tbodyaccjerkxyz
+- tbodygyroxyz
+- tbodygyrojerkxyz
 - tbodyaccmag
 - tgravityaccmag
 - tbodyaccjerkmag
 - tbodygyromag
 - tbodygyrojerkmag
-- fbodyacc-xyz
-- fbodyaccjerk-xyz
-- fbodygyro-xyz
+- fbodyaccxyz
+- fbodyaccjerkxyz
+- fbodygyroxyz
 - fbodyaccmag
 - fbodyaccjerkmag
 - fbodygyromag
@@ -39,8 +39,8 @@ Please note that the original variable names have been changed to lower case per
 
 The set of variables that were estimated from these signals are: 
 
-- mean(): Mean value
-- std(): Standard deviation
+- mean: Mean value - used in tidy data set
+- std: Standard deviation  - used in tidy data set
 - mad(): Median absolute deviation 
 - max(): Largest value in array
 - min(): Smallest value in array
@@ -65,9 +65,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 - tBodyGyroMean
 - tBodyGyroJerkMean
 
-##Part 2
-
-**Date set information**
+###Part 2 - Date set information
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
@@ -88,9 +86,11 @@ For each record in the dataset it is provided:
 - Triaxial Angular velocity from the gyroscope. 
 - A 561-feature vector with time and frequency domain variables. 
 - Its activity label. 
-- An identifier of the subject who carried out the experiment. 
+- An identifier of the subject who carried out the experiment.
 
-##Part 3
+The tidy data set was condensed to just the variable names that contain "mean" or "std" this resulted 79 variable names plus individual and activity. There are 30 individuals and 6 activities, this resulted in 180 rows of data. 
+
+##Part 3 - Data transformations
 
 The data underwent the following transformations to get to the desired tidy set described in the project requirements here https://class.coursera.org/getdata-006/human_grading/view/courses/972584/assessments/3/submissions (need to be signed into Coursera to view this webpage.
 
@@ -99,12 +99,12 @@ The data underwent the following transformations to get to the desired tidy set 
 - Create a vector for the column names and insert the column names
 - Subset complete data.frame for just the columns that that are mean and std dev per project description step 2
 - Use activity names instead of activity numbers per project step 3
-- Change variable names to more appropriate names. Per the course lectures this required changing the data to lower class. No additional changes were made and the names complied with class lectures.
+- Change variable names to more appropriate names. Per the course lectures this required changing the data to lower class, remove hyphens and parenthesis
 - Write the tidy data to a seperate file in the project directory. The file is tidydata.txt and is a comma deliminated .txt file.
 
 The R script for making the tidy data is https://github.com/gpw797/R-data-project/blob/master/run_analysis.R
 
-#note that the R file run_analysis.R is well documented with comments 
+#### note that the R file run_analysis.R is well documented with comments 
 
 
 
